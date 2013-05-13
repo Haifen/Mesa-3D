@@ -208,6 +208,8 @@ nv50_screen_get_param(struct pipe_screen *pscreen, enum pipe_cap param)
    case PIPE_CAP_TEXTURE_QUERY_LOD:
    case PIPE_CAP_SAMPLE_SHADING:
       return class_3d >= NVA3_3D_CLASS;
+   case PIPE_CAP_DEVICE_MEMORY_SIZE:
+      return nouveau_screen(pscreen)->device->vram_size >> 20;
    default:
       NOUVEAU_ERR("unknown PIPE_CAP %d\n", param);
       return 0;
