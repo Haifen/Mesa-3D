@@ -200,6 +200,8 @@ The integer capabilities:
 * ``PIPE_CAP_SAMPLE_SHADING``: Whether there is support for per-sample
   shading. The context->set_min_samples function will be expected to be
   implemented.
+* ``PIPE_CAP_RASTERIZER_LOWER_LEFT_ORIGIN``: Indicates whether the setting of
+  lower_left_origin in pipe_rasterizer_state is supported.
 
 
 .. _pipe_capf:
