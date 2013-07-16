@@ -1971,6 +1971,7 @@ AM_CONDITIONAL(NEED_GALLIUM_LLVMPIPE_DRIVER, test "x$HAVE_GALLIUM_I915" = xyes -
 #       where communication with xserver is not desired).
 if test "x$enable_gallium_loader" = xyes; then
     GALLIUM_WINSYS_DIRS="$GALLIUM_WINSYS_DIRS sw/null sw/wrapper"
+    GALLIUM_PIPE_LOADER_LIBS="$DLOPEN_LIBS"
 
     if test "x$NEED_WINSYS_XLIB" = xyes; then
         GALLIUM_PIPE_LOADER_DEFINES="$GALLIUM_PIPE_LOADER_DEFINES -DHAVE_PIPE_LOADER_XLIB"
