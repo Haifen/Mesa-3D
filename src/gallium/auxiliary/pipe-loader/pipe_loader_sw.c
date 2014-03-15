@@ -29,7 +29,9 @@
 
 #include "util/u_memory.h"
 #include "util/u_dl.h"
+#ifdef HAVE_PIPE_LOADER_DRI
 #include "sw/dri/dri_sw_winsys.h"
+#endif
 #include "sw/null/null_sw_winsys.h"
 #include "sw/wrapper/wrapper_sw_winsys.h"
 #ifdef HAVE_PIPE_LOADER_XLIB
