@@ -171,6 +171,7 @@ if HAVE_GALLIUM_LLVMPIPE
 AM_CPPFLAGS += -DGALLIUM_LLVMPIPE
 nodist_EXTRA_pipe_swrast_la_SOURCES = dummy.cpp
 
-pipe_swrast_la_LIBADD += \
+pipe_swrast_la_LIBADD = \
+	$(PIPE_LIBS) \
 	$(top_builddir)/src/gallium/drivers/llvmpipe/libllvmpipe.la
 endif
