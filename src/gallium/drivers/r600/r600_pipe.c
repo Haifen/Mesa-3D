@@ -315,7 +315,7 @@ static int r600_get_param(struct pipe_screen* pscreen, enum pipe_cap param)
 	case PIPE_CAP_TEXTURE_GATHER_SM5:
 	case PIPE_CAP_TEXTURE_QUERY_LOD:
         case PIPE_CAP_SAMPLE_SHADING:
-	case PIPE_CAP_RASTERIZER_LOWER_LEFT_ORIGIN:
+/*	case PIPE_CAP_RASTERIZER_LOWER_LEFT_ORIGIN: // Figure out why this breaks */
 		return 0;
 
 	/* Stream output. */
@@ -375,7 +375,7 @@ static int r600_get_param(struct pipe_screen* pscreen, enum pipe_cap param)
 	case PIPE_CAP_ENDIANNESS:
 		return PIPE_ENDIAN_LITTLE;
 
-	case PIPE_CAP_DEVICE_MEMORY_SIZE:
+/*	case PIPE_CAP_DEVICE_MEMORY_SIZE: // This too */
 		return rscreen->b.info.vram_size >> 20;
 	}
 	return 0;
