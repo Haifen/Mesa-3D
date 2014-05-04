@@ -120,9 +120,6 @@ endif
 if HAVE_ST_OMX
 SUBDIRS += omx-nouveau
 endif
-
-if HAVE_ST_NINE
-SUBDIRS += nine-nouveau
 endif
 
 if HAVE_GALLIUM_SOFTPIPE
